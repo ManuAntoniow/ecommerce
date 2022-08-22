@@ -1,0 +1,35 @@
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    background-color: cornflowerblue;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+li {
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.lego {
+    width: 70px;
+    padding: 10px;
+}
+
+button {
+    margin: 10px;
+}
