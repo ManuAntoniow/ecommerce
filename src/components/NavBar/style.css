@@ -6,12 +6,14 @@
     width: 100%;
     height: 90px;
     background-color: cornflowerblue;
+    position: fixed;
 }
 
 ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    padding: 0;
 }
 
 li {

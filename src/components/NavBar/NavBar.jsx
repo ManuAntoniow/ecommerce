@@ -1,5 +1,6 @@
 import LEGO from '../../LEGO.png'
 import './style.css'
+import CartWidget from '../CartWidget/CartWidget'
 
 const NavBar = () => {
     return (
@@ -20,9 +21,10 @@ const NavBar = () => {
                     </li>
                 </ul>
             </div>
-            <div>
+            {/* <div>
                 <button>Login</button>
-            </div>
+            </div> */}
+            <CartWidget/>
         </div>
     )
 }
