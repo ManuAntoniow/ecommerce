@@ -1,4 +1,4 @@
-import LEGO from '../../LEGO.png'
+import LEGO from '../../img/LEGO.png'
 import './style.css'
 import CartWidget from '../CartWidget/CartWidget'
 
