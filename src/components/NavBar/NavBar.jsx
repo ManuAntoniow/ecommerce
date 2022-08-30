@@ -9,22 +9,22 @@ const NavBar = () => {
                 <img className="lego" src={LEGO} alt="logo"/>
             </div>
             <div>
-                <ul>
+                <ul className="NavList">
                     <li>
-                        <a href="#">Home</a>
+                        <a className="NavItem" href="#">Home</a>
                     </li>
                     <li>
-                        <a href="#">Productos</a>
+                        <a className="NavItem" href="#">Productos</a>
                     </li>
                     <li>
-                        <a href="#">Nosotros</a>
+                        <a className="NavItem" href="#">Nosotros</a>
                     </li>
                 </ul>
             </div>
-            {/* <div>
-                <button>Login</button>
-            </div> */}
-            <CartWidget/>
+            <div>
+                {/* <button>Login</button> */}
+                <CartWidget/>
+            </div>
         </div>
     )
 }

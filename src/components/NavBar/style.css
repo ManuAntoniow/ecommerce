@@ -7,29 +7,32 @@
     height: 90px;
     background-color: cornflowerblue;
     position: fixed;
+    
 }
 
-ul {
+.NavList {
     display: flex;
     flex-direction: row;
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 li {
     margin-left: 10px;
     margin-right: 10px;
-    
 }
 
-a {
+.NavItem {
     text-decoration: none;
     color: black;
+    box-sizing: unset;
 }
 
 .lego {
     width: 70px;
     padding: 10px;
+    box-sizing: unset;
 }
 
 button {
