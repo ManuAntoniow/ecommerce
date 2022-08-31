@@ -3,13 +3,15 @@ import {CartPlus} from 'react-bootstrap-icons'
 import {CartDash} from 'react-bootstrap-icons'
 import './style.css'
 
-function ItemCount() {
-    const [value, setValue] = useState (0)
+function ItemCount({stock}) {
+    const [value, setValue] = useState (1)
     const sumarValue = () => {
-        setValue(value + 1)
+        if (value < stock) {
+            setValue(value + 1)
+        }
     }
     const restarValue = () => {
-        if (value > 0){
+        if (value > 1){
             setValue(value - 1)
         }
     }
