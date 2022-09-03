@@ -1,21 +1,32 @@
+import './mock-data'
+import {useState, useEffect} from 'react'
+import data from './mock-data'
+import ItemList from '../ItemList/ItemList'
 import './style.css'
-import Button from 'react-bootstrap/Button'
-import Card from 'react-bootstrap/Card'
-import ItemCount from '../ItemCount/ItemCount'
 
 function ItemListContainer() {
+    const [items, setItems] = useState([])
+    const getData = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(data)
+        }, 2000)
+    })
+    useEffect(() => {
+        getData.then((result) => {
+            setItems(result)
+            console.log(result)
+        })
+    }, [])
     return (
-        <div>
-            <Card>
-                <Card.Img variant="top" src=""/>
-                <Card.Body>
-                    <Card.Title>Producto</Card.Title>
-                    <Card.Text>100$</Card.Text>
-                    <ItemCount stock="5"/>
-                    <button className='boton-carrito'>Agregar al carrito</button>
-                </Card.Body>
-            </Card>
-        </div>
+        <>
+            <div>
+                <h2>Mas Vendidos</h2>
+            </div>
+            <div className='fila-productos'>
+                <ItemList itemList={items}/>
+            </div>
+            
+        </>
     )
 }
 

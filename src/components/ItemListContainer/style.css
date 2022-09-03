@@ -1,6 +1,6 @@
-.card {
-    width: auto;
+.fila-productos{
+    display: flex;
 }
-.boton-carrito{
-    border-radius: 5px;
+h2{
+    color: white;
 }

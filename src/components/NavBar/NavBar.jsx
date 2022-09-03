@@ -27,6 +27,7 @@ const NavBar = () => {
                     <NavDropdown.Item href="#action/3.1">Marvel</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">DC</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.3">City</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Star Wars</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 </Navbar.Collapse>
