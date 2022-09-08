@@ -2,7 +2,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import LEGO from '../../img/LEGO-miniFigures.jpg'
 import LEGO2 from '../../img/LEGO-R2D2.jpg'
 import LEGO3 from '../../img/LEGO-marvel-avengers.jpg'
-import './style.css'
+import './Carousel.css'
 
 function Carrusel() {
     return (

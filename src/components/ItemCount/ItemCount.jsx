@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import {CartPlus} from 'react-bootstrap-icons'
 import {CartDash} from 'react-bootstrap-icons'
-import './style.css'
+import './ItemCount.css'
 
 function ItemCount({stock}) {
     const [value, setValue] = useState (1)

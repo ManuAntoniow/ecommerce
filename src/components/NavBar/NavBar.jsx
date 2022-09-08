@@ -1,5 +1,5 @@
 import LEGO from '../../img/LEGO.png'
-// import './style.css'
+// import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
