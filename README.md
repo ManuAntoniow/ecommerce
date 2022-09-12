@@ -3,6 +3,4 @@
 link:
 
 ## Proyecto para CoderHouse
-Aplicacion proyecto para el curso de:
-
-### React.js
+Aplicacion proyecto para el curso de React.js
