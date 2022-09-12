@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/ecommerce/static/css/main.116e9c1b.css",
+    "main.js": "/ecommerce/static/js/main.06a542a0.js",
+    "static/js/787.dcc73137.chunk.js": "/ecommerce/static/js/787.dcc73137.chunk.js",
+    "static/media/LEGO-miniFigures.jpg": "/ecommerce/static/media/LEGO-miniFigures.363063eb68841d4802ca.jpg",
+    "static/media/LEGO-producto-mileniumfalcon.jpg": "/ecommerce/static/media/LEGO-producto-mileniumfalcon.f2ab30304d74d598c305.jpg",
+    "static/media/LEGO-producto-avengers.jpg": "/ecommerce/static/media/LEGO-producto-avengers.4c529221c4d9a36faa02.jpg",
+    "static/media/LEGO-marvel-avengers.jpg": "/ecommerce/static/media/LEGO-marvel-avengers.f5b42a65dc9841c91e69.jpg",
+    "static/media/LEGO-producto-batman.jpg": "/ecommerce/static/media/LEGO-producto-batman.1c1ce0ee93dd87ee7265.jpg",
+    "static/media/LEGO-R2D2.jpg": "/ecommerce/static/media/LEGO-R2D2.d11f77bf2cfa255243dc.jpg",
+    "static/media/LEGO-producto-ironman.jpeg": "/ecommerce/static/media/LEGO-producto-ironman.f308e90d2a41ef7abef7.jpeg",
+    "static/media/LEGO-producto-city.jpeg": "/ecommerce/static/media/LEGO-producto-city.bc32879f60279caea945.jpeg",
+    "static/media/LEGO.png": "/ecommerce/static/media/LEGO.8c92d743bad6f0c0fa7b.png",
+    "index.html": "/ecommerce/index.html",
+    "main.116e9c1b.css.map": "/ecommerce/static/css/main.116e9c1b.css.map",
+    "main.06a542a0.js.map": "/ecommerce/static/js/main.06a542a0.js.map",
+    "787.dcc73137.chunk.js.map": "/ecommerce/static/js/787.dcc73137.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.116e9c1b.css",
+    "static/js/main.06a542a0.js"
+  ]
+}
