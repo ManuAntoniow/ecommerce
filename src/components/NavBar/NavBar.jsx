@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Nav from 'react-bootstrap/Nav'
+import {Link} from 'react-router-dom'
 
 const NavBar = () => {
     return (
@@ -21,13 +22,13 @@ const NavBar = () => {
                 </Navbar.Brand>
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Nosotros</Nav.Link>
+                    <Nav.Link as={Link} to='ecommerce/'>Home</Nav.Link>
+                    <Nav.Link as={Link} to='ecommerce/Nosotros'>Nosotros</Nav.Link>
                     <NavDropdown title="Productos" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Marvel</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">DC</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">City</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Star Wars</NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to='ecommerce/Productos/Marvel'>Marvel</NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to='ecommerce/Productos/DC'>DC</NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to='ecommerce/Productos/City'>City</NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to='ecommerce/Productos/Star Wars'>Star Wars</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 </Navbar.Collapse>
