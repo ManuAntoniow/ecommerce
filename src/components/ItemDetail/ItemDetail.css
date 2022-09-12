@@ -1,4 +1,11 @@
 .detalle {
+    display: flex;
+    text-align: left;
+    color: white;
+    margin: 50px;
+}
+.img-detalle{
     width: 800px;
-    margin: 10px;
+    margin-right: 50px;
+    border-radius: 20px;
 }

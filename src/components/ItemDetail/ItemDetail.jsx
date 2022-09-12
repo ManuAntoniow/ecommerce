@@ -1,8 +1,9 @@
 import {useState, useEffect} from 'react'
 import getFetch from '../ItemListContainer/mock-data'
-import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 import './ItemDetail.css'
-import {useParams} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom'
+import ItemCount from '../ItemCount/ItemCount'
 
 function ItemDetail({itemDetail}) {
     const [data, setData] = useState({})
@@ -22,17 +23,17 @@ function ItemDetail({itemDetail}) {
                 loading ? <h2>Cargando...</h2>
                 :
                 <>
-                    <Card className='detalle'>
-                        <Card.Img src={data.image} alt="Card image" />
-                        <Card.ImgOverlay>
-                            <Card.Title>{data.name}</Card.Title>
-                            <Card.Subtitle>{data.description}</Card.Subtitle>
-                            <Card.Text>{data.theme}</Card.Text>
-                            <Card.Text>{data.price}</Card.Text>
-                        </Card.ImgOverlay>
-                        </Card>
-                    
-                    <h2>{data.name}</h2>
+                    <div className='detalle'>
+                        <img src={data.image} alt="imagen Producto" className='img-detalle'/>
+                        <div>
+                            <h1>{data.name}</h1>
+                            <h4>{data.theme}</h4>
+                            <h5>{data.description}</h5>
+                            <h2>{data.price}</h2>
+                            <ItemCount stock={data.stock}/>
+                            <Button className='boton-carrito'>Agregar al Carrito</Button>
+                        </div>
+                    </div>
                 </>
             }
         </>

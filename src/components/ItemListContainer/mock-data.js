@@ -1,8 +1,8 @@
 import LEGO1 from '../../img/LEGO-producto-batman.jpg'
-import LEGO2 from '../../img/LEGO-producto-mileniumfalcon.jpg'
+import LEGO2 from '../../img/LEGO-producto-millenniumfalcon.jpg'
 import LEGO3 from '../../img/LEGO-producto-avengers.jpg'
-import LEGO4 from '../../img/LEGO-producto-city.jpeg'
-import LEGO5 from '../../img/LEGO-producto-ironman.jpeg'
+import LEGO4 from '../../img/LEGO-producto-city.jpg'
+import LEGO5 from '../../img/LEGO-producto-ironman.jpg'
 
 const productos = [
     {
