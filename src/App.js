@@ -10,7 +10,7 @@ import Nosotros from './components/Nosotros/Nosotros';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div>
         <NavBar/>
         <main className="App-main">
           <Routes>
