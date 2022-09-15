@@ -1,3 +1,13 @@
-.cart-container {
-    padding: 10px;
+.cart-product-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    margin-left: 10px;
+}
+
+p{
+    margin: auto;
 }

@@ -1,18 +1,21 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useContext} from 'react'
 import getFetch from '../ItemListContainer/mock-data'
 import './ItemDetail.css'
 import {useParams} from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
+import {CartContext} from '../../context/CartContext'
 
 function ItemDetail({itemDetail}) {
     const [data, setData] = useState({})
     const [loading, setLoading] = useState(true)
     const [contador, setContador] = useState(0)
     const {productId} = useParams()
+    const value = useContext(CartContext)
     
     const onAdd = (dato)=>{
         console.log("hizo click", dato)
         setContador(dato)
+        value.addItem(data, dato)
     }
 
     useEffect(() => {
