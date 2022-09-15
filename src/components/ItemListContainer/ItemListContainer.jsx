@@ -1,6 +1,7 @@
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 import{useParams} from 'react-router-dom'
+import Row from 'react-bootstrap/Row'
 
 function ItemListContainer() {
     const {themeId} = useParams()
@@ -11,9 +12,9 @@ function ItemListContainer() {
                     {themeId}
                 </h1>
             </div>
-            <div className='fila-productos'>
+            <Row>
                 <ItemList/>
-            </div>
+            </Row>
         </>
     )
 }

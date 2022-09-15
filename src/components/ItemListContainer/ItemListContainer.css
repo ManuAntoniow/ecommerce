@@ -1,5 +1,10 @@
-.fila-productos{
+.col{
     display: flex;
+    justify-content: center;
+
+}
+.row:after{
+    padding: 0;
 }
 h2{
     color: white;

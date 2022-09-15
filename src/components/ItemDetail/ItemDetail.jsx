@@ -8,13 +8,12 @@ import {CartContext} from '../../context/CartContext'
 function ItemDetail({itemDetail}) {
     const [data, setData] = useState({})
     const [loading, setLoading] = useState(true)
-    const [contador, setContador] = useState(0)
+    // const [contador, setContador] = useState(0)
     const {productId} = useParams()
     const value = useContext(CartContext)
     
     const onAdd = (dato)=>{
-        console.log("hizo click", dato)
-        setContador(dato)
+        // setContador(dato)
         value.addItem(data, dato)
     }
 
