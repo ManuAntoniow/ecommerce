@@ -1,5 +1,5 @@
-import Carrusel from "../Carousel/Carousel";
-import ItemListContainer from "../ItemListContainer/ItemListContainer";
+import Carrusel from "../Carousel/Carousel"
+import ItemListMasVendios from "../ItemListMasVendidos/ItemListMasVendidos"
 
 function Home() {
     return (
@@ -8,7 +8,7 @@ function Home() {
             <div>
                 <h2>Mas Vendidos</h2>
             </div>
-            <ItemListContainer/>
+            <ItemListMasVendios/>
             <div>
                 <h2>Oferta Especial</h2>
                 

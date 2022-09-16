@@ -28,7 +28,7 @@ const NavBar = () => {
                             <NavDropdown.Item as={Link} to='ecommerce/Productos/Marvel'>Marvel</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to='ecommerce/Productos/DC'>DC</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to='ecommerce/Productos/City'>City</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to='ecommerce/Productos/Star Wars'>Star Wars</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to='ecommerce/Productos/StarWars'>Star Wars</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     <Nav>

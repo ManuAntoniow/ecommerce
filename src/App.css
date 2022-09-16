@@ -17,3 +17,8 @@ footer{
   margin-top: auto;
   background-color: white;
 }
+
+.logo{
+  width: 200px;
+  margin-top: 10px;
+}
