@@ -1,11 +1,23 @@
 .detalle {
     display: flex;
-    text-align: left;
-    color: white;
-    margin: 50px;
+    flex-direction: column;
+    margin: 20px;
 }
 .img-detalle{
-    width: 800px;
-    margin-right: 50px;
+    width: 400px;
     border-radius: 20px;
 }
+
+@media screen and (min-width: 768px) {
+    .img-detalle{
+        width: 700px;
+    }}
+
+@media screen and (min-width: 1024px) {
+    .img-detalle{
+        width: 800px;
+        margin-right: 50px;
+    }
+    .detalle {
+        flex-direction: row;
+    }}
