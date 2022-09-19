@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ecommerce/static/css/main.cc7d309e.css",
-    "main.js": "/ecommerce/static/js/main.36238da1.js",
+    "main.css": "/ecommerce/static/css/main.1b8c4141.css",
+    "main.js": "/ecommerce/static/js/main.f42fdd26.js",
     "static/js/787.dcc73137.chunk.js": "/ecommerce/static/js/787.dcc73137.chunk.js",
     "static/media/LEGO-miniFigures.jpg": "/ecommerce/static/media/LEGO-miniFigures.363063eb68841d4802ca.jpg",
     "static/media/LEGO-marvel-avengers.jpg": "/ecommerce/static/media/LEGO-marvel-avengers.f5b42a65dc9841c91e69.jpg",
@@ -38,12 +38,12 @@
     "static/media/DC-logo.png": "/ecommerce/static/media/DC-logo.550225f648f5415a9493.png",
     "static/media/Marvel-logo.png": "/ecommerce/static/media/Marvel-logo.c62c859021025ac58899.png",
     "index.html": "/ecommerce/index.html",
-    "main.cc7d309e.css.map": "/ecommerce/static/css/main.cc7d309e.css.map",
-    "main.36238da1.js.map": "/ecommerce/static/js/main.36238da1.js.map",
+    "main.1b8c4141.css.map": "/ecommerce/static/css/main.1b8c4141.css.map",
+    "main.f42fdd26.js.map": "/ecommerce/static/js/main.f42fdd26.js.map",
     "787.dcc73137.chunk.js.map": "/ecommerce/static/js/787.dcc73137.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc7d309e.css",
-    "static/js/main.36238da1.js"
+    "static/css/main.1b8c4141.css",
+    "static/js/main.f42fdd26.js"
   ]
 }
