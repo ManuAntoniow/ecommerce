@@ -5,6 +5,7 @@ import {CartContext} from '../../context/CartContext'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
+import {Link} from 'react-router-dom'
 
 function CartWidget() {
     const [show, setShow] = useState(false)
@@ -28,14 +29,15 @@ function CartWidget() {
                     <Offcanvas.Title>Cart</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
+                    {value.productCartList.length == 0 && <p>Su carrito actualmente se encuentra bacio</p>}
                     {value.productCartList.map(item=>(
                         <>
-                            <div className='cart-product-container'>
-                                <div className='detalle-cart'>
+                            <div className='cartWidget-product-container'>
+                                <div className='detalle-cartWidget'>
                                     <p>{item.name}</p>
                                     <p>Cantidad: {item.quantity}</p>
                                 </div>
-                                <div className='cart-product-container'>
+                                <div className='cartWidget-product-container'>
                                     <h4>${item.quantity * item.price}</h4>
                                     <Button variant="danger" onClick={()=>value.removeItem(item.id)}>X</Button>
                                 </div>
@@ -44,8 +46,8 @@ function CartWidget() {
                         </>
                     ))}
                     <div className='CartWidget-footer'>
-                        <Button onClick={()=>value.clear()}>Clear</Button>
-                        <Button>Ver el carrito</Button>
+                        {value.productCartList.length != 0 && <Button onClick={()=>value.clear()}>Clear</Button>}
+                        <Button as={Link} to='ecommerce/Cart' onClick={handleClose}>Ver el carrito</Button>
                         <h4>Total: ${value.getTotalPrice()}</h4>
                     </div>
                     

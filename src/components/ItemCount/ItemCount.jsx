@@ -4,6 +4,7 @@ import {CartDash} from 'react-bootstrap-icons'
 import './ItemCount.css'
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
+import {Link} from 'react-router-dom'
 
 function ItemCount({stock, onAdd, name}) {
     const [value, setValue] = useState (1)
@@ -41,7 +42,8 @@ function ItemCount({stock, onAdd, name}) {
                 </Modal.Header>
                 <Modal.Body>Su producto {name} ya esta en su carrito listo para ser comprado</Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>Close</Button>
+                    <Button variant="primary" onClick={handleClose}>Seguir Comprando</Button>
+                    <Button variant="secondary" as={Link} to='/ecommerce/Cart' onClick={handleClose}>Cart</Button>
                 </Modal.Footer>
             </Modal>
         </>

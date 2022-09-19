@@ -1,0 +1,23 @@
+.cart-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.detalle-cart{
+    display: flex;
+    justify-content: space-between;
+}
+.detalle-cart h4{
+    margin-right: 10px;
+}
+.detalle-cart img{
+    width: 250px;
+    margin: 10px;
+    border-radius: 15px;
+}
+.detalle-cart-datos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

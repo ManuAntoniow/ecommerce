@@ -1,13 +1,16 @@
-.cart-product-container {
+.cartWidget-product-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-.detalle-cart{
+.cartWidget-product-container h4 {
+    margin-right: 10px;
+}
+.detalle-cartWidget{
     display: flex;
     flex-direction: column;
 }
-.detalle-cart p{
+.detalle-cartWidget p{
     margin: 0;
 }
 .carrito-count{
