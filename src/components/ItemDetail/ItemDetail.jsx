@@ -37,7 +37,7 @@ function ItemDetail({itemDetail}) {
                             <h1>{data.name}</h1>
                             <h4>{data.theme}</h4>
                             <h5>{data.description}</h5>
-                            <h2>{data.price}</h2>
+                            <h2>${data.price}</h2>
                             <ItemCount stock={data.stock} onAdd={onAdd} name={data.name}/>
                         </div>
                     </div>

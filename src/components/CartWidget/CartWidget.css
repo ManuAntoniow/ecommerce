@@ -1,13 +1,30 @@
 .cart-product-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+.detalle-cart{
+    display: flex;
+    flex-direction: column;
+}
+.detalle-cart p{
+    margin: 0;
+}
+.carrito-count{
+    display: flex;
     justify-content: center;
 }
-
-.btn{
-    margin-left: 10px;
+.carrito-count p{
+    margin-top: 15px;
 }
-
-p{
-    margin: auto;
+.CartWidget-footer{
+    position: fixed;
+    bottom: 10px;
+    display: flex;
+}
+.CartWidget-footer .btn{
+    margin-right: 10px;
+}
+.cart-product-container h4 {
+    margin-right: 10px;
 }

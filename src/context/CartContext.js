@@ -43,8 +43,21 @@ export const CartProvider = ({children})=>{
     const isInCart = (itemId)=>{
         return productCartList.findIndex(product => product.id === itemId)
     }
+
+    const getTotalPrice = ()=>{
+        const totalPrice = productCartList.reduce((acc, item)=>acc + (item.quantity * item.price),0)
+        return totalPrice
+    }
+
+    const getTotalProducts = ()=>{
+        const totalProducts = productCartList.reduce((acc, item)=>acc + item.quantity,0)
+        if (totalProducts != 0) {
+            return totalProducts
+        }
+    }
+
     return(
-        <CartContext.Provider value={{productCartList, addItem, removeItem, clear, isInCart}}>
+        <CartContext.Provider value={{productCartList, addItem, removeItem, clear, isInCart, getTotalPrice, getTotalProducts}}>
             {children}
         </CartContext.Provider>
     )

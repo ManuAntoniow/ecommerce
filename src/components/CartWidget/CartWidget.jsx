@@ -18,7 +18,10 @@ function CartWidget() {
         <>
             <ButtonGroup>
                 <Button variant="danger">Login</Button>
-                <Button variant="danger"><CartFill size={30} onClick={handleShow}/></Button>
+                <Button variant="danger" className='carrito-count'>
+                    <CartFill size={30} onClick={handleShow}/>
+                    <p>{value.getTotalProducts()}</p>
+                </Button>
             </ButtonGroup>
             <Offcanvas show={show} onHide={handleClose} backdrop="static" placement="end">
                 <Offcanvas.Header closeButton>
@@ -28,13 +31,24 @@ function CartWidget() {
                     {value.productCartList.map(item=>(
                         <>
                             <div className='cart-product-container'>
-                                <p>{item.name} - {item.quantity}</p>
-                                <Button variant="danger" onClick={()=>value.removeItem(item.id)}>X</Button>
+                                <div className='detalle-cart'>
+                                    <p>{item.name}</p>
+                                    <p>Cantidad: {item.quantity}</p>
+                                </div>
+                                <div className='cart-product-container'>
+                                    <h4>${item.quantity * item.price}</h4>
+                                    <Button variant="danger" onClick={()=>value.removeItem(item.id)}>X</Button>
+                                </div>
                             </div>
                             <hr/>
                         </>
                     ))}
-                    <Button onClick={()=>value.clear()}>Clear</Button>
+                    <div className='CartWidget-footer'>
+                        <Button onClick={()=>value.clear()}>Clear</Button>
+                        <Button>Ver el carrito</Button>
+                        <h4>Total: ${value.getTotalPrice()}</h4>
+                    </div>
+                    
                 </Offcanvas.Body>
             </Offcanvas>
             </>
