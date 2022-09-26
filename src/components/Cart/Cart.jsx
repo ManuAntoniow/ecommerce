@@ -5,10 +5,9 @@ import './Cart.css'
 import {Link} from 'react-router-dom'
 
 const Cart = () => {
-
     const value = useContext(CartContext)
 
-    if (value.productCartList.length != 0) {
+    if (value.productCartList.length !== 0) {
         return (
             <>
                 <h2>Carrito</h2>
@@ -16,7 +15,7 @@ const Cart = () => {
                     <>
                         <div className='cart-container'>
                             <div className='detalle-cart'>
-                                <img src={item.image}/>
+                                <img src={item.image} alt={item.name}/>
                                 <div className='detalle-cart-datos'>
                                     <p>{item.name}</p>
                                     <p>Cantidad: {item.quantity}</p>

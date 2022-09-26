@@ -1,7 +1,9 @@
 
 function Nosotros() {
   return (
-    <div>Nosotros</div>
+    <>
+      <div>Nosotros</div>
+    </>
   )
 }
 

@@ -51,7 +51,7 @@ export const CartProvider = ({children})=>{
 
     const getTotalProducts = ()=>{
         const totalProducts = productCartList.reduce((acc, item)=>acc + item.quantity,0)
-        if (totalProducts != 0) {
+        if (totalProducts !== 0) {
             return totalProducts
         }
     }

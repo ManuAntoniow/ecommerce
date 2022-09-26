@@ -296,11 +296,11 @@ const productos = [
     },
 ]
 
-const getFetch = new Promise((resolve, reject) =>{
-    setTimeout(() => {
-        resolve(productos)
-        reject(err => console.log(err))
-    }, 2000)
-})
+// const getFetch = new Promise((resolve, reject) =>{
+//     setTimeout(() => {
+//         resolve(productos)
+//         reject(err => console.log(err))
+//     }, 2000)
+// })
 
-export default getFetch
+// export default getFetch

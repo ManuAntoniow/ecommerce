@@ -9,12 +9,10 @@ import {Link} from 'react-router-dom'
 
 function CartWidget() {
     const [show, setShow] = useState(false)
-
+    const value = useContext(CartContext)
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true)
 
-    const value = useContext(CartContext)
-    
     return (
         <>
             <ButtonGroup>
@@ -29,7 +27,7 @@ function CartWidget() {
                     <Offcanvas.Title>Cart</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    {value.productCartList.length == 0 && <p>Su carrito actualmente se encuentra bacio</p>}
+                    {value.productCartList.length === 0 && <p>Su carrito actualmente se encuentra bacio</p>}
                     {value.productCartList.map(item=>(
                         <>
                             <div className='cartWidget-product-container'>
@@ -46,7 +44,7 @@ function CartWidget() {
                         </>
                     ))}
                     <div className='CartWidget-footer'>
-                        {value.productCartList.length != 0 && <Button onClick={()=>value.clear()}>Clear</Button>}
+                        {value.productCartList.length !== 0 && <Button onClick={()=>value.clear()}>Clear</Button>}
                         <Button as={Link} to='ecommerce/Cart' onClick={handleClose}>Ver el carrito</Button>
                         <h4>Total: ${value.getTotalPrice()}</h4>
                     </div>

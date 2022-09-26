@@ -1,18 +1,28 @@
 import {useState, useEffect} from 'react'
-import getFetch from '../ItemListContainer/mock-data'
 import Item from "../Item/Item"
 import Row from 'react-bootstrap/Row'
+import {db} from "../../utils/firebase"
+import {collection, getDocs, query, where} from "firebase/firestore"
 
 function ItemListMasVendios() {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
-    useEffect(() => {
-        getFetch.then(data => {
-            const dataFilter = data.filter(product=>product.categoria === 'mas vendidos')
-            setData(dataFilter)
+
+    useEffect(()=>{
+        const queryRef = query(collection(db, "items"), where("categoria", "==", "mas vendidos"))
+        getDocs(queryRef).then(response=>{
+            const productos = response.docs.map(doc =>{
+                const newProduct = {
+                ...doc.data(),
+                id: doc.id
+            }
+            return newProduct
+            })
+            setData(productos)
             setLoading(false)
         })
     },[])
+
     return (
         <>
             {

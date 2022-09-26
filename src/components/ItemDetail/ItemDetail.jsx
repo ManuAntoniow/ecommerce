@@ -1,9 +1,10 @@
 import {useState, useEffect, useContext} from 'react'
-import getFetch from '../ItemListContainer/mock-data'
 import './ItemDetail.css'
 import {useParams} from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
 import {CartContext} from '../../context/CartContext'
+import {db} from "../../utils/firebase"
+import {doc, getDoc} from "firebase/firestore"
 
 function ItemDetail({itemDetail}) {
     const [data, setData] = useState({})
@@ -17,13 +18,19 @@ function ItemDetail({itemDetail}) {
         value.addItem(data, dato)
     }
 
-    useEffect(() => {
-        getFetch
-        .then(res => {
-            setData(res.find(producto => producto.id === parseInt(productId)))
+    useEffect(()=>{
+        const getData = async()=>{
+            const query = doc(db, "items", productId)
+            const response = await getDoc(query)
+            const item = {
+                ...response.data(),
+                id: response.id
+            }
+            setData(item)
             setLoading(false)
-        })
-    })
+        }
+        getData()
+    },[productId])
 
     return (
         <>
