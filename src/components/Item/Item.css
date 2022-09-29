@@ -1,5 +1,20 @@
 .card {
-    width: 350px;
+    height: 400px;
     margin: 10px;
     color: black;
 }
+
+@media screen and (min-width: 768px) {
+    .card {
+        height: 300px;
+        width: 220px;}}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        height: 370px;
+        width: 300px;}}
+
+@media screen and (min-width: 1440px) {
+    .card {
+        height: 370px;
+        width: 350px;}}

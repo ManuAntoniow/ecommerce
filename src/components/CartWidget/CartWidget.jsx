@@ -27,13 +27,13 @@ function CartWidget() {
                     <Offcanvas.Title>Cart</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    {value.productCartList.length === 0 && <p>Su carrito actualmente se encuentra bacio</p>}
+                    {value.productCartList.length === 0 && <p>Your cart is currently empty</p>}
                     {value.productCartList.map(item=>(
                         <>
                             <div className='cartWidget-product-container'>
                                 <div className='detalle-cartWidget'>
                                     <p>{item.name}</p>
-                                    <p>Cantidad: {item.quantity}</p>
+                                    <p>Quantity: {item.quantity}</p>
                                 </div>
                                 <div className='cartWidget-product-container'>
                                     <h4>${item.quantity * item.price}</h4>
@@ -45,7 +45,7 @@ function CartWidget() {
                     ))}
                     <div className='CartWidget-footer'>
                         {value.productCartList.length !== 0 && <Button onClick={()=>value.clear()}>Clear</Button>}
-                        <Button as={Link} to='ecommerce/Cart' onClick={handleClose}>Ver el carrito</Button>
+                        <Button as={Link} to='ecommerce/Cart' onClick={handleClose}>Go to cart</Button>
                         <h4>Total: ${value.getTotalPrice()}</h4>
                     </div>
                     

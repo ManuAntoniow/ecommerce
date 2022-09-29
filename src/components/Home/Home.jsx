@@ -6,11 +6,11 @@ function Home() {
         <>
             <Carrusel/>
             <div>
-                <h2>Mas Vendidos</h2>
+                <h2>Best sellers</h2>
             </div>
             <ItemListMasVendios/>
             <div>
-                <h2>Oferta Especial</h2>
+                <h2>Especial offer</h2>
                 
             </div>
         </>

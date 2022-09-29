@@ -35,15 +35,15 @@ function ItemCount({stock, onAdd, name}) {
                 <p>{value}</p>
                 <CartPlus onClick={sumarValue} size={25}/>
             </div>
-            <Button onClick={evento}>Agregar al Carrito</Button>
+            <Button onClick={evento}>Add to cart</Button>
             <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Se agrego al carrito exitosamente</Modal.Title>
+                    <Modal.Title>Added to cart successfully</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Su producto {name} ya esta en su carrito listo para ser comprado</Modal.Body>
+                <Modal.Body>Your product {name} its now in your cart ready to be bought</Modal.Body>
                 <Modal.Footer>
-                    <Button variant="primary" onClick={handleClose}>Seguir Comprando</Button>
-                    <Button variant="secondary" as={Link} to='/ecommerce/Cart' onClick={handleClose}>Cart</Button>
+                    <Button variant="primary" onClick={handleClose}>Continue buying</Button>
+                    <Button variant="secondary" as={Link} to='/ecommerce/Cart' onClick={handleClose}>Go to cartart</Button>
                 </Modal.Footer>
             </Modal>
         </>

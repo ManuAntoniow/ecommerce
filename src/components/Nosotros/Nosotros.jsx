@@ -1,10 +1,10 @@
 
-function Nosotros() {
+function About() {
   return (
     <>
-      <div>Nosotros</div>
+      <div>About us</div>
     </>
   )
 }
 
-export default Nosotros
+export default About

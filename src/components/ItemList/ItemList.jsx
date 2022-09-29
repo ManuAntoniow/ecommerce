@@ -6,6 +6,7 @@ import DC from '../../img/DC-logo.png'
 import City from '../../img/City-logo.png'
 import StarWars from '../../img/StarWars-logo.png'
 import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import {db} from "../../utils/firebase"
 import {collection, getDocs, query, where} from "firebase/firestore"
 
@@ -31,30 +32,36 @@ function ItemList() {
         })
     }, [themeId])
 
+    const numberOfRows = Math.ceil(data.length / 3)
+
     return (
         <>
             {
-                loading ? <h2>Cargando...</h2>
+                loading ? <h2>Loading...</h2>
                 :
                 <>
                     <div>
                         <img src={logo} className='logo' alt='logo-theme'/>
                     </div>
-                    <Row>
-                        {data.map((product) => {
-                            return(
-                                <Item
-                                    id={product.id}
-                                    name={product.name}
-                                    description={product.description}
-                                    theme={product.theme}
-                                    price={product.price}
-                                    image={product.image}
-                                    stock={product.stock}
-                                />
-                            )})
-                        }
-                    </Row>
+                    {
+                        Array(numberOfRows).fill().map((_, rowIndex) => (
+                            <Row >
+                            {data.slice(rowIndex * 3, (rowIndex *3) + 3).map(product => (
+                                <Col sm="4">
+                                    <Item
+                                        id={product.id}
+                                        name={product.name}
+                                        description={product.description}
+                                        theme={product.theme}
+                                        price={product.price}
+                                        image={product.image}
+                                        stock={product.stock}
+                                    />
+                                </Col>
+                            ))}
+                            </Row>
+                        ))
+                    }
                 </>
             }
         </>

@@ -26,7 +26,7 @@ function ItemListMasVendios() {
     return (
         <>
             {
-                loading ? <h2>Cargando...</h2>
+                loading ? <h2>Loading...</h2>
                 :
                 <>
                     <Row>
