@@ -1,13 +1,14 @@
 .card {
-    height: 400px;
+    height: 360px;
+    width: 360px;
     margin: 10px;
     color: black;
 }
 
 @media screen and (min-width: 768px) {
     .card {
-        height: 300px;
-        width: 220px;}}
+        height: 370px;
+        width: 340px;}}
 
 @media screen and (min-width: 1024px) {
     .card {

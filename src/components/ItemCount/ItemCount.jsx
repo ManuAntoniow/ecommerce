@@ -1,9 +1,13 @@
+import './ItemCount.css'
+
+//Bootstrap resources
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
+
+//Helpers
 import {useState} from 'react'
 import {CartPlus} from 'react-bootstrap-icons'
 import {CartDash} from 'react-bootstrap-icons'
-import './ItemCount.css'
-import Button from 'react-bootstrap/Button'
-import Modal from 'react-bootstrap/Modal'
 import {Link} from 'react-router-dom'
 
 function ItemCount({stock, onAdd, name}) {
@@ -17,7 +21,6 @@ function ItemCount({stock, onAdd, name}) {
         onAdd(value)
         handleShow()
     }
-
     const sumarValue = () => {
         if (value < stock) {
             setValue(value + 1)
@@ -28,6 +31,7 @@ function ItemCount({stock, onAdd, name}) {
             setValue(value - 1)
         }
     }
+
     return (
         <>
             <div className='itemCounter'>

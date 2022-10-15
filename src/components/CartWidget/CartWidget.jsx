@@ -1,15 +1,20 @@
 import './CartWidget.css'
-import {CartFill} from 'react-bootstrap-icons'
-import {useState, useContext} from 'react'
-import {CartContext} from '../../context/CartContext'
+
+//Bootstrap resources
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
+
+//Helpers
+import {CartFill} from 'react-bootstrap-icons'
+import {useState, useContext} from 'react'
+import {CartContext} from '../../context/CartContext'
 import {Link} from 'react-router-dom'
 
 function CartWidget() {
     const [show, setShow] = useState(false)
     const value = useContext(CartContext)
+    
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true)
 
@@ -51,7 +56,7 @@ function CartWidget() {
                     
                 </Offcanvas.Body>
             </Offcanvas>
-            </>
+        </>
     )
 }
 

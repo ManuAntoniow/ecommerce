@@ -1,13 +1,17 @@
 import './App.css'
+
+//Componentes
 import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Footer from './components/Footer/Footer'
 import Home from './components/Home/Home'
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Nosotros from './components/Nosotros/Nosotros'
-import {CartProvider} from "./context/CartContext"
 import Cart from './components/Cart/Cart'
+import ItemDetail from './components/ItemDetail/ItemDetail'
+import ItemList from './components/ItemList/ItemList'
+
+//Helpers
+import {CartProvider} from "./context/CartContext"
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
@@ -19,9 +23,9 @@ function App() {
             <Routes>
               <Route path='/ecommerce' element={<Home/>}/>
               <Route path='/ecommerce/Nosotros' element={<Nosotros/>}/>
-              <Route path='/ecommerce/Productos' element={<ItemListContainer/>}/>
-              <Route path='/ecommerce/Productos/:themeId' element={<ItemListContainer/>}/>
-              <Route path='/ecommerce/item/:productId' element={<ItemDetailContainer/>}/>
+              <Route path='/ecommerce/Productos' element={<ItemList/>}/>
+              <Route path='/ecommerce/Productos/:themeId' element={<ItemList/>}/>
+              <Route path='/ecommerce/item/:productId' element={<ItemDetail/>}/>
               <Route path='/ecommerce/Cart' element={<Cart/>}/>
             </Routes>
           </main>

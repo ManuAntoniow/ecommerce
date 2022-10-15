@@ -1,7 +1,11 @@
-import {useState, useEffect, useContext} from 'react'
 import './ItemDetail.css'
-import {useParams} from 'react-router-dom'
+
+//Components
 import ItemCount from '../ItemCount/ItemCount'
+
+//Helpers
+import {useState, useEffect, useContext} from 'react'
+import {useParams} from 'react-router-dom'
 import {CartContext} from '../../context/CartContext'
 import {db} from "../../utils/firebase"
 import {doc, getDoc} from "firebase/firestore"
@@ -9,15 +13,12 @@ import {doc, getDoc} from "firebase/firestore"
 function ItemDetail({itemDetail}) {
     const [data, setData] = useState({})
     const [loading, setLoading] = useState(true)
-    // const [contador, setContador] = useState(0)
     const {productId} = useParams()
     const value = useContext(CartContext)
     
     const onAdd = (dato)=>{
-        // setContador(dato)
         value.addItem(data, dato)
     }
-
     useEffect(()=>{
         const getData = async()=>{
             const query = doc(db, "items", productId)

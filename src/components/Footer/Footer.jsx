@@ -1,3 +1,6 @@
+import './Footer.css'
+
+//Helpers
 import Nav from 'react-bootstrap/Nav'
 import {Instagram, Twitter} from 'react-bootstrap-icons'
 

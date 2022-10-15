@@ -1,6 +1,13 @@
-import {useState, useEffect} from 'react'
+import './ItemListMasVendidos.css'
+
+//Components
 import Item from "../Item/Item"
+
+//Bootstrap resources
 import Row from 'react-bootstrap/Row'
+
+//Helpers
+import {useState, useEffect} from 'react'
 import {db} from "../../utils/firebase"
 import {collection, getDocs, query, where} from "firebase/firestore"
 

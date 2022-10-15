@@ -1,9 +1,16 @@
+import './NavBar.css'
+
+//Resources
 import LEGO from '../../img/LEGO.png'
 import CartWidget from '../CartWidget/CartWidget'
+
+//Bootstrap resources
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Nav from 'react-bootstrap/Nav'
+
+//Helpers
 import {Link} from 'react-router-dom'
 
 const NavBar = () => {

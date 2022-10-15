@@ -1,10 +1,14 @@
-import {useContext} from 'react'
-import {CartContext} from '../../context/CartContext'
+import './Cart.css'
+
+//Bootstrap resources
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
-import './Cart.css'
+
+//Helpers
+import {useContext} from 'react'
+import {CartContext} from '../../context/CartContext'
 import {Link} from 'react-router-dom'
 import {db} from '../../utils/firebase'
 import {collection, addDoc} from 'firebase/firestore'
@@ -28,9 +32,6 @@ const Cart = () => {
         const query = collection(db, "orders")
         addDoc(query, order).then(response => console.log("response: ", response))
     }
-    
-    // const updateOrder = () => {
-    // }
 
     if (value.productCartList.length !== 0) {
         return (
@@ -99,7 +100,6 @@ const Cart = () => {
                         <Form.Check type="checkbox" label="Accept terms"/>
                     </Form.Group>
                     <Button type="submit">Submit</Button>
-                    {/* <Button onClick={updateOrder}>Submit</Button> */}
                 </Form>
             </>
         )

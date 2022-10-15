@@ -1,3 +1,4 @@
+//Componentes
 import Carrusel from "../Carousel/Carousel"
 import ItemListMasVendios from "../ItemListMasVendidos/ItemListMasVendidos"
 
